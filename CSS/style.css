@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #887d7d;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: end;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    color: #262f80;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul h1{
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+
+nav.mobile{
+    display: none;
+    width: 100%;
+    height: 110vh;
+}
+
+nav.mobile ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45%;
+}
+
+nav.mobile ul h1{
+    margin-top: -40px;
+}
+
+nav.mobile ul li{
+    margin-bottom: 35px;
+}
+
+label{
+    display: none;
+}
+
+#menu{
+    color: #fff;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 3rem;
+    padding: 1rem;
+    transition: all 0.3s linear;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.servicos{
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-card {
+    cursor: pointer;
+    width: 300px;
+    margin: 20px;
+    padding: 2rem 20px 20px 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #000;
+}
+
+.service-card p {
+    font-size: 17px;
+    text-align: left;
+}
+
+.icon-container {
+    transition: 0.3s linear;
+    width: max-content;
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 30px 0 rgb(65, 66, 65);
+    transform: scale(1.1);
+}
+
+.sobre{
+    height: 50vh;
+}
+
+.info{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(156, 150, 150);
+    transition: 0.3s linear;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.box {
+    width: 80%; /* Reduz a largura padrão para telas menores */
+    max-width: 600px; /* Define um limite máximo para a largura */
+    margin: 60px auto; /* Ajusta o espaçamento superior */
+    padding: 40px; /* Reduz o padding em telas menores */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais discreta */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+.title {
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+    color: #333;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.primary,
+.secondary {
+    font-size: 0.95rem; /* Ajusta o tamanho do texto */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.secondary {
+    font-style: italic;
+    color: #777;
+}
+
+.btn {
+    padding: 10px 18px; /* Ajusta o padding */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+/* Seção de Contato */
+#contato {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Campos de entrada */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fafafa;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #6200ee;
+    box-shadow: 0px 0px 5px rgba(98, 0, 238, 0.3);
+}
+
+form textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+/* Botão de envio */
+form button {
+    background-color: #6200ee;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #3700b3;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #4a00c4;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    #contato {
+        padding: 20px 15px;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .box {
+        padding: 30px;
+        margin: 40px auto;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .primary,
+    .secondary {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%; /* Aumenta a largura em telas muito pequenas */
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .primary,
+    .secondary {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .info{
+        margin-top: -15%;
+    }
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width: 560px) {
+    nav.desktop {
+        display: none;
+    }
+
+    label {
+        display: block;
+    }
+
+
+
+}
