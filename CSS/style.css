@@ -17,7 +17,7 @@ html{
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     box-shadow: 0.5rem 0.5rem 0.5rem #fff;
 }
@@ -25,29 +25,33 @@ nav {
 nav ul {
     display: flex;
     justify-content: end;
+    align-items: center;
+    gap: 20px;
 }
 
 nav ul li {
     margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 nav ul li a {
     color: #ffffff;
     font-size: 24px;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li:hover{
-    background-color: #fff;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     color: #262f80;
     text-decoration: underline;
-    transition: color 0.3s ease-in-out;
 }
 
-nav ul h1{
+nav ul h1 {
     width: 100%;
     color: #fff;
     font-size: 30px;
